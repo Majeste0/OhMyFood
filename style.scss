@@ -1,0 +1,69 @@
+	/* Couleurs */
+	$color-primary: #9356DC;
+	$color-secondary: #FF79DA;
+	$color-tertiary: #99E2D0;
+	$gris: #D3D3D3;
+	$grisclair: rgb(234,234,234);
+
+	/* Polices */
+	body {
+		font-family: 'Roboto', sans-serif;
+		font-size: 2em;
+		font-weight: 300;
+		margin: 0px;
+	}
+
+	h1, h2, h3 {
+		font-style: Shrikhand;
+	} 
+
+	.logo {
+		display: block;
+		margin: 15px auto 15px auto;
+		width: 50%;
+		}
+
+	.position {
+		display: flex;
+		background-color: $gris;
+		width: 100%;
+		box-shadow: 1px -3px 12px -2px rgba(56,54,56,0.53);
+		height: 80px;
+		p { 
+			color: rgb(83,83,83);
+			margin: 0;
+			margin : auto;
+		}
+		.fa-map-marker-alt {
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+	}
+	.explore {
+		background-color: $grisclair;
+		width: 100%;
+		margin: auto;
+		height: calc(height + 5000px;);
+		h4 {
+			margin-top: 0;
+			padding-top: 40px;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 500;
+		}
+		
+		h4, p {
+			text-align: center;
+
+		}
+		.btn__accueil {
+			background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+			width: 80%;
+			border-radius: 40px;
+			color: white;
+			margin: auto;
+         	display: block;
+         	vertical-align: middle;
+		}
+	}
+	
+
