@@ -6,9 +6,13 @@ body {
   font-weight: 300;
   margin: 0px; }
 
+ul {
+  list-style: none; }
+
 h1, h2, h3 {
   font-style: Shrikhand; }
 
+/* Header */
 .logo {
   display: block;
   margin: 15px auto 15px auto;
@@ -48,5 +52,36 @@ h1, h2, h3 {
     margin: auto;
     display: block;
     vertical-align: middle; }
+
+/* fin header */
+/* Fonctionnement */
+.fonctionnement {
+  padding-left: 2%; }
+  .fonctionnement p {
+    background-color: #eaeaea;
+    padding: 20px;
+    font-size: 0.7em;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.2); }
+
+/* Restaurants */
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  background-color: #eaeaea;
+  justify-content: space-between;
+  padding-left: 2%;
+  border: solid red;
+  width: 100%; }
+  .restaurants img {
+    max-width: 80%;
+    height: auto; }
+    .restaurants img:nth-child(2) {
+      image-orientation: 90deg flip; }
+  .restaurants li {
+    background-color: white;
+    border: solid blue;
+    margin-bottom: 20px; }
 
 /*# sourceMappingURL=style.css.map */
