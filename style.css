@@ -9,6 +9,9 @@ body {
 ul {
   list-style: none; }
 
+.titre__article {
+  margin-left: 5%; }
+
 /* Header */
 .logo {
   display: block;
@@ -52,15 +55,13 @@ ul {
 
 /* fin header */
 /* Fonctionnement */
-.fonctionnement {
-  padding-left: 2%; }
-  .fonctionnement p {
-    background-color: #eaeaea;
-    padding: 20px;
-    font-size: 0.7em;
-    text-align: center;
-    border-radius: 20px;
-    box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.2); }
+.fonctionnement p {
+  background-color: #eaeaea;
+  padding: 20px;
+  font-size: 0.7em;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.2); }
 
 /* Restaurants */
 .restaurants {
@@ -68,21 +69,19 @@ ul {
   flex-direction: column;
   background-color: #eaeaea;
   justify-content: space-between;
-  padding-left: 2%;
-  border: solid red;
-  width: 100%; }
+  width: 100%;
+  padding-left: 0px;
+  align-items: center;
+  margin-bottom: 0px; }
   .restaurants img {
     max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 20px; }
+    border-radius: 20px 20px 0px 0px; }
     .restaurants img:nth-child(2) {
-      image-orientation: 90deg flip; }
+      transform: rotate(90deg) scaleX(-1); }
   .restaurants li {
     background-color: white;
-    border: solid blue;
     margin-bottom: 20px;
-    width: 95%;
+    width: 92%;
     border-radius: 20px; }
     .restaurants li h5, .restaurants li p {
       margin-left: 2%;
@@ -97,10 +96,16 @@ footer {
   font-size: 0.7em;
   background-color: #353535;
   color: white; }
+  footer a {
+    text-decoration: none;
+    color: white; }
   footer h4 {
     font-family: Shrikhand;
     margin-left: 6%;
-    font-weight: normal; }
+    font-weight: normal;
+    margin-top: 0px; }
+  footer ul {
+    margin-bottom: 0px; }
 
 /* icons list 
 <i class="fas fa-hands-helping"></i>

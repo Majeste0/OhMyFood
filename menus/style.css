@@ -1,0 +1,59 @@
+/* Couleurs */
+/* Polices */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  margin: 0px; }
+
+ul {
+  list-style: none; }
+
+header {
+  display: flex; }
+
+.fa-arrow-left {
+  transform: scale(0.5); }
+
+.logo {
+  display: block;
+  margin: 15px auto 15px calc(auto-(width(fa-arrow-left)));
+  width: 50%; }
+
+.btn__commander {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  width: 80%;
+  border-radius: 40px;
+  color: white;
+  margin: auto;
+  display: block;
+  vertical-align: middle; }
+
+li {
+  display: flex;
+  border: solid red; }
+  li h6 {
+    margin: 0px;
+    width: 100%;
+    height: 20%; }
+  li p {
+    margin: 0px;
+    height: 20%;
+    float: left; }
+
+footer {
+  font-size: 0.7em;
+  background-color: #353535;
+  color: white; }
+  footer a {
+    text-decoration: none;
+    color: white; }
+  footer h4 {
+    font-family: Shrikhand;
+    margin-left: 6%;
+    font-weight: normal;
+    margin-top: 0px; }
+  footer ul {
+    margin-bottom: 0px; }
+
+/*# sourceMappingURL=style.css.map */

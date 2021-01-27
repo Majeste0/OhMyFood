@@ -1,0 +1,78 @@
+	/* Couleurs */
+	$color-primary: #9356DC;
+	$color-secondary: #FF79DA;
+	$color-tertiary: #99E2D0;
+	$gris: #D3D3D3;
+	$grisclair: rgb(234,234,234);
+
+	/* Polices */
+	body {
+		font-family: 'Roboto', sans-serif;
+		font-size: 2em;
+		font-weight: 300;
+		margin: 0px;
+	}
+	ul {
+		list-style: none;
+	}
+
+	header {
+		display: flex;
+	}	
+
+	.fa-arrow-left {
+		transform: scale(0.5);
+	}
+		.logo {
+		display: block;
+		margin: 15px auto 15px calc(auto-(width(fa-arrow-left)));
+		width: 50%;
+		}
+	.btn__commander {
+			background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+			width: 80%;
+			border-radius: 40px;
+			color: white;
+			margin: auto;
+         	display: block;
+         	vertical-align: middle;
+		}
+	
+	li {
+		display: flex;
+		border:solid red;
+		h6 {
+			margin: 0px;
+			width: 100%;
+			height: 20%;
+		}
+
+		p {
+			margin:0px;
+			height: 20%;
+		}
+	}
+
+
+
+footer {
+	font-size: 0.7em;
+	background-color: rgb(53,53,53);
+	color: white;
+	a {
+		text-decoration: none;
+		color: white;
+
+	}
+	h4 {
+		font-family: Shrikhand;
+		margin-left: 6%;
+		font-weight: normal;
+		margin-top: 0px;
+
+	}
+	ul {
+		margin-bottom: 0px;
+
+	}
+}
