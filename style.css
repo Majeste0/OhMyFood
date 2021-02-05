@@ -2,7 +2,7 @@
 /* Polices */
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 2em;
+  font-size: 1.4em;
   font-weight: 300;
   margin: 0px; }
 
@@ -10,7 +10,8 @@ ul {
   list-style: none; }
 
 .titre__article {
-  margin-left: 5%; }
+  margin-left: 5%;
+  margin-bottom: 28px; }
 
 /* Header */
 .logo {
@@ -23,12 +24,16 @@ ul {
   background-color: #D3D3D3;
   width: 100%;
   box-shadow: 1px -3px 12px -2px rgba(56, 54, 56, 0.53);
-  height: 80px; }
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: center; }
   .position p {
-    color: #535353;
-    margin: 0;
-    margin: auto; }
+    color: #535353; }
   .position .fa-map-marker-alt {
+    margin-top: auto;
+    margin-bottom: auto; }
+  .position .lieu {
+    margin-left: 10px;
     margin-top: auto;
     margin-bottom: auto; }
 
@@ -36,7 +41,7 @@ ul {
   background-color: #eaeaea;
   width: 100%;
   margin: auto;
-  height: calc(height + 5000px;); }
+  padding-bottom: 76px; }
   .explore h4 {
     margin-top: 0;
     padding-top: 40px;
@@ -44,6 +49,10 @@ ul {
     font-weight: 500; }
   .explore h4, .explore p {
     text-align: center; }
+  .explore p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; }
   .explore .btn__accueil {
     background: linear-gradient(to bottom right, #FF79DA, #9356DC);
     width: 80%;
@@ -51,17 +60,79 @@ ul {
     color: white;
     margin: auto;
     display: block;
-    vertical-align: middle; }
+    vertical-align: middle;
+    padding: 10px; }
 
 /* fin header */
-/* Fonctionnement */
-.fonctionnement p {
+.main {
   background-color: #eaeaea;
-  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 40px; }
+
+.fa-mobile-alt {
+  padding-left: 29px !important;
+  margin-right: 30px !important;
+  color: #999999; }
+
+.fa-store {
+  padding-left: 23px !important;
+  margin-right: 24px !important;
+  color: #9356DC; }
+
+.fa-list-ul {
+  padding-left: 25px !important;
+  margin-right: 26px !important;
+  color: #999999; }
+
+.choose {
+  background-color: #eaeaea;
   font-size: 0.7em;
-  text-align: center;
   border-radius: 20px;
-  box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  padding: 20px;
+  width: 80%;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto; }
+  .choose i {
+    padding-left: 30px;
+    margin-right: 30px; }
+  .choose p {
+    margin-top: auto;
+    margin-bottom: auto; }
+    .choose p:nth-child(1) {
+      background-color: #9356DC;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      margin-left: -5%;
+      padding: 3px;
+      text-align: center;
+      color: white;
+      font-size: 0.8em; }
+  .choose:nth-child(3) {
+    background-color: rgba(147, 86, 220, 0.3); }
+
+.fonctionnement {
+  padding-bottom: 60px; }
+
+/* Fonctionnement */
+ /*.fonctionnement {
+	p {
+		background-color: $grisclair;
+		padding: 20px;
+		font-size: 0.7em;
+		text-align: center;
+		border-radius: 20px;
+		box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.2);
+	}
+	div {
+		width: 90%;
+		margin: auto;
+	}
+}
+
 
 /* Restaurants */
 .restaurants {
@@ -74,28 +145,33 @@ ul {
   align-items: center;
   margin-bottom: 0px; }
   .restaurants img {
-    max-width: 100%;
+    width: 100%;
+    height: 78%;
+    object-fit: cover;
     border-radius: 20px 20px 0px 0px; }
-    .restaurants img:nth-child(2) {
-      transform: rotate(90deg) scaleX(-1); }
   .restaurants li {
     background-color: white;
     margin-bottom: 20px;
     width: 92%;
-    border-radius: 20px; }
+    border-radius: 20px;
+    height: 270px;
+    overflow: hidden; }
     .restaurants li h5, .restaurants li p {
       margin-left: 2%;
-      margin-bottom: 2%;
-      margin-top: 2%;
+      margin-bottom: 1%;
+      margin-top: 1%;
       font-size: 0.7em; }
-    .restaurants li p {
-      padding-bottom: 3%; }
+  .restaurants a {
+    height: 100%;
+    width: 100%; }
 
 /* Footer */
 footer {
   font-size: 0.7em;
   background-color: #353535;
-  color: white; }
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 40px; }
   footer a {
     text-decoration: none;
     color: white; }
