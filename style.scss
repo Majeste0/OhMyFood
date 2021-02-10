@@ -39,6 +39,7 @@
 		justify-content: center;
 		p { 
 			color: rgb(83,83,83);
+			font-weight: 400;
 		}
 		.fa-map-marker-alt {
 			margin-top: auto;
@@ -55,12 +56,16 @@
 		background-color: $grisclair;
 		width: 100%;
 		margin: auto;
-		padding-bottom: 76px;
+		padding-bottom: 40px;
 		h4 {
 			margin-top: 0;
 			padding-top: 40px;
 			font-family: 'Roboto', sans-serif;
-			font-weight: 500;
+			font-weight: 700;
+			font-size: 1.2em;
+			margin-left: 10%;
+			margin-right: 10%;
+			margin-bottom: 2%;
 		}
 		
 		h4, p {
@@ -71,16 +76,16 @@
 			    margin-left: auto;
    	 			margin-right: auto;
     			width: 80%;
+    			font-size: 1.1em;
 		 }
 		.btn__accueil {
 			background: linear-gradient(to bottom right, $color-secondary, $color-primary);
 			width: 80%;
 			border-radius: 40px;
-			color: white;
-			margin: auto;
-         	display: block;
-         	vertical-align: middle;
-         	padding: 10px;
+			color: white;       	
+    padding: 15px 0px 15px 0px;
+         	font-weight: 400;
+         	font-size: 0.9em;
 
 		}
 	}
@@ -181,6 +186,30 @@
 	padding-left: 0px;
 	align-items: center;
 	margin-bottom: 0px;
+	position: relative;
+	.new {
+    position: absolute;  
+    left: 78%;                        
+    top: 2%;                         
+    transform: translate(-50%, -50%); 
+    background-color: rgb(153,226,208);
+    color: rgb(18,146,114);
+    z-index: 1000;
+    padding: 8px;
+    font-weight: 400;
+}
+ .new2 {
+ 	position: absolute;  
+    left: 78%;                        
+    top: 27%;                         
+    transform: translate(-50%, -50%); 
+    background-color: rgb(153,226,208);
+    color: rgb(18,146,114);
+    z-index: 1000;
+    padding: 8px;
+    font-weight: 400;
+ }
+	
 	img {
 		width: 100%;
 		height: 78%;
@@ -191,9 +220,10 @@
 		background-color: white;
 		margin-bottom: 20px;
 		width: 92%;
-		border-radius: 20px;
+		border-radius: 10px;
 		height: 270px;
 		overflow: hidden;
+		padding-bottom: 2px;
 		h5, p {
 			margin-left: 2%;
 			margin-bottom: 1%;
@@ -226,11 +256,16 @@ footer {
 		margin-left: 6%;
 		font-weight: normal;
 		margin-top: 0px;
+		font-size: 1.3em;
+		margin-bottom: 16px;
 
 	}
 	ul {
 		margin-bottom: 0px;
 
+	}
+	li {
+		margin-bottom: 5px;
 	}
 }
 
@@ -244,10 +279,8 @@ footer {
     height:70px;
     width:70px;
     float: right;
-    transform: scale(0.4);
+    transform: scale(0.3);
     margin-top: -10px;
-
-    
 }
 #heart .fill {
     display: block;

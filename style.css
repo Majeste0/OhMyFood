@@ -28,7 +28,8 @@ ul {
   padding-bottom: 20px;
   justify-content: center; }
   .position p {
-    color: #535353; }
+    color: #535353;
+    font-weight: 400; }
   .position .fa-map-marker-alt {
     margin-top: auto;
     margin-bottom: auto; }
@@ -41,27 +42,31 @@ ul {
   background-color: #eaeaea;
   width: 100%;
   margin: auto;
-  padding-bottom: 76px; }
+  padding-bottom: 40px; }
   .explore h4 {
     margin-top: 0;
     padding-top: 40px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 500; }
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%; }
   .explore h4, .explore p {
     text-align: center; }
   .explore p {
     margin-left: auto;
     margin-right: auto;
-    width: 80%; }
+    width: 80%;
+    font-size: 1.1em; }
   .explore .btn__accueil {
     background: linear-gradient(to bottom right, #FF79DA, #9356DC);
     width: 80%;
     border-radius: 40px;
     color: white;
-    margin: auto;
-    display: block;
-    vertical-align: middle;
-    padding: 10px; }
+    padding: 15px 0px 15px 0px;
+    font-weight: 400;
+    font-size: 0.9em; }
 
 /* fin header */
 .main {
@@ -145,7 +150,28 @@ ul {
   width: 100%;
   padding-left: 0px;
   align-items: center;
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  position: relative; }
+  .restaurants .new {
+    position: absolute;
+    left: 78%;
+    top: 2%;
+    transform: translate(-50%, -50%);
+    background-color: #99e2d0;
+    color: #129272;
+    z-index: 1000;
+    padding: 8px;
+    font-weight: 400; }
+  .restaurants .new2 {
+    position: absolute;
+    left: 78%;
+    top: 27%;
+    transform: translate(-50%, -50%);
+    background-color: #99e2d0;
+    color: #129272;
+    z-index: 1000;
+    padding: 8px;
+    font-weight: 400; }
   .restaurants img {
     width: 100%;
     height: 78%;
@@ -155,9 +181,10 @@ ul {
     background-color: white;
     margin-bottom: 20px;
     width: 92%;
-    border-radius: 20px;
+    border-radius: 10px;
     height: 270px;
-    overflow: hidden; }
+    overflow: hidden;
+    padding-bottom: 2px; }
     .restaurants li h5, .restaurants li p {
       margin-left: 2%;
       margin-bottom: 1%;
@@ -181,9 +208,13 @@ footer {
     font-family: Shrikhand;
     margin-left: 6%;
     font-weight: normal;
-    margin-top: 0px; }
+    margin-top: 0px;
+    font-size: 1.3em;
+    margin-bottom: 16px; }
   footer ul {
     margin-bottom: 0px; }
+  footer li {
+    margin-bottom: 5px; }
 
 /* animation  */
 #heart {
@@ -191,7 +222,7 @@ footer {
   height: 70px;
   width: 70px;
   float: right;
-  transform: scale(0.4);
+  transform: scale(0.3);
   margin-top: -10px; }
 
 #heart .fill {
