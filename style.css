@@ -4,8 +4,15 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1.4em;
   font-weight: 300;
-  margin: 0px; }
+  margin: 0px;
+  opacity: 1;
+  animation-name: opacity;
+  animation-duration: 4s; }
 
+/* @keyframes opacity {
+	0% {opacity: 0}
+	100%{opacity: 1}
+} */
 ul {
   list-style: none; }
 
@@ -217,7 +224,7 @@ footer {
     margin-bottom: 5px; }
 
 /* animation  */
-#heart {
+.heart {
   display: flex;
   height: 70px;
   width: 70px;
@@ -225,7 +232,7 @@ footer {
   transform: scale(0.3);
   margin-top: -10px; }
 
-#heart .fill {
+.heart .fill {
   display: block;
   height: 70px;
   left: -1px;
@@ -240,7 +247,7 @@ footer {
   -ms-transition: height 2s ease-in-out;
   transition: height 2s ease-in-out; }
 
-#heart .fill:before, #heart .fill:after {
+.heart .fill:before, #heart .fill:after {
   background: #FFFFFF;
   border-radius: 85px 60px 0 0;
   content: "";
@@ -262,7 +269,7 @@ footer {
   -o-transform-origin: 0 100%;
   transform-origin: 0 100%; }
 
-#heart .fill:after {
+.heart .fill:after {
   left: 1px;
   -webkit-transform: rotate(45deg);
   border-radius: 45px 60px 0 0;
@@ -276,11 +283,11 @@ footer {
   -o-transform-origin: 100% 100%;
   transform-origin: 100% 100%; }
 
-#heart .outline {
+.heart .outline {
   position: relative;
   margin-left: 8px; }
 
-#heart .outline:before, #heart .outline:after {
+.heart .outline:before, #heart .outline:after {
   position: absolute;
   content: "";
   left: 28px;
@@ -301,7 +308,7 @@ footer {
   -o-transform-origin: 0 100%;
   transform-origin: 0 100%; }
 
-#heart .outline:after {
+.heart .outline:after {
   left: -11px;
   -webkit-transform: rotate(45deg);
   border-radius: 45px 60px 0 0;
@@ -315,9 +322,96 @@ footer {
   -o-transform-origin: 100% 100%;
   transform-origin: 100% 100%; }
 
-#heart:hover .fill {
+.heart:hover .fill {
   height: 0px; }
 
+strong {
+  display: block;
+  margin-top: 100%; }
+
+.loader-section {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #222222;
+  z-index: 100;
+  visibility: hidden; }
+
+.section-left {
+  left: 0;
+  color: white;
+  font-family: Shrikhand;
+  font-size: 2em;
+  animation-name: gauche;
+  animation-duration: 3s; }
+  .section-left strong {
+    text-align: right; }
+
+@keyframes gauche {
+  0% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%); } }
+.section-right {
+  right: 0;
+  color: white;
+  font-family: Shrikhand;
+  animation-name: droite;
+  animation-duration: 3s;
+  font-size: 2em; }
+
+@keyframes droite {
+  0% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 0;
+    transform: translateX(100%); } }
+/* div id="loader-wrapper">
+    <div id="loader"></div>
+ 
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div> */
+/* loader  
+body{background:#ECF0F1}
+
+.load {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+  /*change these sizes to fit into your project
+  width:100px;
+  height:100px;
+}
+.load hr{
+	border:0;
+	margin:0;
+	width:40%;
+	height:40%;
+	position:absolute;
+	border-radius:50%;
+	animation:spin 2s ease;
+	opacity: 0;}
+
+.load :first-child{background:$color-primary;animation-delay:-1.5s}
+.load :nth-child(2){background:$color-secondary;animation-delay:-1s}
+.load :nth-child(3){background:$color-tertiary;animation-delay:-0.5s}
+.load :last-child{background:$gris}
+
+@keyframes spin{
+  0%{transform:translate(0); opacity: 1 !important;}
+  25%{transform:translate(160%)}
+  50%{transform:translate(160%, 160%)}
+  75%{transform:translate(0, 160%)}
+  100%{opacity:1}
+}
+*/
 /* icons list 
 <i class="fas fa-hands-helping"></i>
 <i class="fas fa-utensils"></i>
@@ -325,5 +419,9 @@ footer {
 <i class="fas fa-list-ul"></i>
 <i class="fas fa-store"></i>
 */
+@media screen (min-width: 768px) and (max-width: 1024) {
+  body {
+    background-color: blue !important;
+    font-size: 3em; } }
 
 /*# sourceMappingURL=style.css.map */

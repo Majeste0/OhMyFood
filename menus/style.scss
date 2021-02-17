@@ -19,6 +19,11 @@
 
 	header {
 		display: flex;
+		a {
+			width: calc(100% - 40px);
+			text-align: center;
+			margin-top: auto;
+		}
 	}	
 	img {
 		width: 100%;
@@ -28,14 +33,13 @@
 	.titre {
 		display: flex;
 		justify-content: space-between;
+		margin-top: -76px;
 	}
 	h4 {
 		margin-left: 5%;
 		font-family: Shrikhand;
 		font-size: 1.1em;
 		font-weight: 400;
-		margin-top: -50px;
-		padding-top: 30px;
 	}
 	h5 {
 		margin-bottom: 0px;
@@ -51,10 +55,13 @@
 		margin-left: 5%;
 	}
 	.fa-arrow-left {
-		transform: scale(0.7);
+		    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2%;
 	}
 	.logo {
 		width:50%;
+		vertical-align: middle;
 	}
 	.btn__commander {
 		background: linear-gradient(to bottom right, #FF79DA, #9356DC);
@@ -74,7 +81,33 @@
 		border-top-right-radius: 50px;
 		border-top-left-radius: 50px;
 		padding-bottom: 10%;
-
+		i {
+		background-color: rgb(142,222,201);
+		padding: 24px;
+		color:white;
+		border-radius: 0px 15px 15px 0;
+		float: right;
+		margin-right: -2%;
+		margin-top: -7px;
+		display: none !important;
+	}
+		ul {
+			&:nth-child(4) {
+				animation-duration: 2.0s;}
+			&:nth-child(7) {animation-duration: 4.0s;}
+			&:nth-child(10) {animation-duration: 6s;}
+			animation-name: fade-in;
+		}
+		@keyframes fade-in {
+		0% { 
+			transform: translateY(40px);
+			opacity: 0;
+		} 
+		100% { 
+			opacity: 1;
+			transform: translateY(0px);
+		}	}
+		
 		li {
 			background-color: white;
 			border-radius: 20px;
@@ -84,217 +117,246 @@
 			margin-left: auto;
 			padding: 7px;
 			padding-bottom: 10px;
-			animation-name: fade-in;
-			animation-duration: 1s;
-		&:nth-child(1) {animation-delay: 0.0s; }
-		&:nth-child(2) {animation-delay: 0.5s; }
-		&:nth-child(3) {animation-delay: 0.0s; }
-		&:nth-child(4) {animation-delay: 1.5s; }
-		&:nth-child(5) {animation-delay: 2.0s; }
-		&:nth-child(6) {animation-delay: 2.5s; }
-		&:nth-child(7) {animation-delay: 2.5s; }
-		&:nth-child(8) {animation-delay: 2.5s; }
-		&:nth-child(9) {animation-delay: 2.5s; }
+			overflow: hidden;
+			height: 50px;
+			.testanim {
+				width: 100%;
+				display: inline-block;
+				&:hover {
+						transition: ease-in-out;
+						width: calc(100% - 72px);
+						}
+					}
+							
+			&:hover {
+				i {
+					animation-name: test;
+					animation-duration: 2s;
+					display: inline-block !important;
+				}
+				@keyframes test {
+					0% {
+						transform: translateX(150px);
+					}
 
+					100% {
+					transform: translateX(0px) rotate(720deg);
+					}
 
-		&:hover {
-			i {
-				animation-name: test;
-				transform: translateX(0px) rotate(360deg);
-				animation-delay: 2s;
-				display: inline-block !important;
-
+				}
 			}
-
-
-
-		}
-		}
-
-		@keyframes fade-in {
-			0% { 
-				opacity: 0;
-				transform: translateY(20px);
-			} 
-			100% { 
-				opacity: 100;
-				transform: translateY(0px);
 			}
 		}
+			
 
+	
 
-
-		i {
-			background-color: rgb(142,222,201);
-			padding: 15px;
-			color:white;
-			border-radius: 0px 15px 15px 0;
-			float: right;
-			margin-right: -2%;
-			transform: translateX(150px);
-			display:none !important;
-		}
-		
-		h6 {
-			margin: 0px;
-			width: 100%;
-			height: 20%;
-			margin-left: 2%;
-			font-size: 0.8em;
-			font-weight: 400;		
-		}
-		strong {
-			font-size: 0.7em;
-			font-weight: 300;
-			&:nth-child(1) {
-				text-overflow: ellipsis;
-				white-space: nowrap;
-				overflow: hidden;
-			}
-			&:nth-child(2) {
-				font-weight:400;
-				color: #4f4e4e;
-			}
-		}
-		.under {
-			display:flex;
-			width:96%;
-			justify-content: space-between;
-			margin-left: 2%;
-
-		}
-
+	h6 {
+		margin: 0px;
+		width: 100%;
+		height: 20%;
+		margin-left: 2%;
+		font-size: 0.8em;
+		font-weight: 400;		
 	}
-
-
-
-	footer {
+	strong {
 		font-size: 0.7em;
-		background-color: rgb(53,53,53);
-		color: white;
-		padding-bottom: 20px;
-		a {
-			text-decoration: none;
-			color: white;
-
+		font-weight: 300;
+		&:nth-child(1) {
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
 		}
-		h4 {
-			font-family: Shrikhand;
-			margin-left: 6%;
-			font-weight: normal;
-			margin-top: 0px;
-
-		}
-		ul {
-			margin-bottom: 0px;
-
-		}
-		li {
-			margin-bottom: 5px;
+		&:nth-child(2) {
+			font-weight:400;
+			color: #4f4e4e;
 		}
 	}
-
-
-
-	#heart {
+	.under {
 		display:flex;
-		height:70px;
-		width:70px;
-		float: right;
-		transform: scale(0.3);
-		margin-top: -10px;
-	}
-	#heart .fill {
-		display: block;
-		height: 70px;
-		left: -1px;
-		overflow: hidden;
-		position: absolute;
-		top: -4px;
-		width: 70px;
-		z-index: 3;
-		-webkit-transition: height 2s ease-in-out;
-		-moz-transition: height 2s ease-in-out;
-		-o-transition: height 2s ease-in-out;
-		-ms-transition: height 2s ease-in-out;
-		transition: height 2s ease-in-out;
-	}
-	#heart .fill:before, #heart .fill:after {
-		background: #FFFFFF;
-		border-radius: 85px 60px 0 0;
-		content:"";
-		height: 59px;
-		left: 37px;
-		position: absolute;
-		top: 6px;
-		width: 36px;
-		-moz-border-radius: 50px 50px 0 0;
-		border-radius: 85px 60px 0 0;
-		-webkit-transform: rotate(-45deg);
-		-moz-transform: rotate(-45deg);
-		-ms-transform: rotate(-45deg);
-		-o-transform: rotate(-45deg);
-		transform: rotate(-45deg);
-		-webkit-transform-origin: 0 100%;
-		-moz-transform-origin: 0 100%;
-		-ms-transform-origin: 0 100%;
-		-o-transform-origin: 0 100%;
-		transform-origin: 0 100%;
-	}
-	#heart .fill:after {
-		left: 1px;
-		-webkit-transform: rotate(45deg);
-		border-radius: 45px 60px 0 0;
-		-moz-transform: rotate(45deg);
-		-ms-transform: rotate(45deg);
-		-o-transform: rotate(45deg);
-		transform: rotate(45deg);
-		-webkit-transform-origin: 100% 100%;
-		-moz-transform-origin: 100% 100%;
-		-ms-transform-origin: 100% 100%;
-		-o-transform-origin: 100% 100%;
-		transform-origin: 100% 100%;
-	}
-	#heart .outline {
-		position: relative;
-		margin-left: 8px;
-	}
-	#heart .outline:before, #heart .outline:after {
-		position: absolute;
-		content:"";
-		left: 28px;
-		top: 1px;
-		width: 39px;
-		height: 62px;
-		background: linear-gradient(to bottom right, $color-secondary, $color-primary);
-		-moz-border-radius: 50px 50px 0 0;
-		border-radius: 85px 60px 0 0;
-		-webkit-transform: rotate(-45deg);
-		-moz-transform: rotate(-45deg);
-		-ms-transform: rotate(-45deg);
-		-o-transform: rotate(-45deg);
-		transform: rotate(-45deg);
-		-webkit-transform-origin: 0 100%;
-		-moz-transform-origin: 0 100%;
-		-ms-transform-origin: 0 100%;
-		-o-transform-origin: 0 100%;
-		transform-origin: 0 100%;
-	}
-	#heart .outline:after {
-		left: -11px;
-		-webkit-transform: rotate(45deg);
-		border-radius: 45px 60px 0 0;
-		-moz-transform: rotate(45deg);
-		-ms-transform: rotate(45deg);
-		-o-transform: rotate(45deg);
-		transform: rotate(45deg);
-		-webkit-transform-origin: 100% 100%;
-		-moz-transform-origin: 100% 100%;
-		-ms-transform-origin: 100% 100%;
-		-o-transform-origin: 100% 100%;
-		transform-origin: 100% 100%;
-	}
-	#heart:hover .fill {
-		height:0px;
+		width:96%;
+		justify-content: space-between;
+		margin-left: 2%;
+
 	}
 
+
+
+
+
+footer {
+	font-size: 0.7em;
+	background-color: rgb(53,53,53);
+	color: white;
+	padding-bottom: 20px;
+	a {
+		text-decoration: none;
+		color: white;
+
+	}
+	h4 {
+		font-family: Shrikhand;
+		margin-left: 6%;
+		font-weight: normal;
+		margin-top: 0px;
+
+	}
+	ul {
+		margin-bottom: 0px;
+
+	}
+	li {
+		margin-bottom: 5px;
+	}
+}
+
+
+
+#heart {
+	display:flex;
+	height:70px;
+	width:70px;
+	transform: scale(0.3);
+	margin-top: 21px;
+}
+#heart .fill {
+	display: block;
+	height: 70px;
+	left: -1px;
+	overflow: hidden;
+	position: absolute;
+	top: -4px;
+	width: 70px;
+	z-index: 3;
+	-webkit-transition: height 2s ease-in-out;
+	-moz-transition: height 2s ease-in-out;
+	-o-transition: height 2s ease-in-out;
+	-ms-transition: height 2s ease-in-out;
+	transition: height 2s ease-in-out;
+}
+#heart .fill:before, #heart .fill:after {
+	background: #FFFFFF;
+	border-radius: 85px 60px 0 0;
+	content:"";
+	height: 59px;
+	left: 37px;
+	position: absolute;
+	top: 6px;
+	width: 36px;
+	-moz-border-radius: 50px 50px 0 0;
+	border-radius: 85px 60px 0 0;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-transform-origin: 0 100%;
+	-moz-transform-origin: 0 100%;
+	-ms-transform-origin: 0 100%;
+	-o-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+}
+#heart .fill:after {
+	left: 1px;
+	-webkit-transform: rotate(45deg);
+	border-radius: 45px 60px 0 0;
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	-ms-transform-origin: 100% 100%;
+	-o-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+}
+#heart .outline {
+	position: relative;
+	margin-left: 8px;
+}
+#heart .outline:before, #heart .outline:after {
+	position: absolute;
+	content:"";
+	left: 28px;
+	top: 1px;
+	width: 39px;
+	height: 62px;
+	background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+	-moz-border-radius: 50px 50px 0 0;
+	border-radius: 85px 60px 0 0;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-transform-origin: 0 100%;
+	-moz-transform-origin: 0 100%;
+	-ms-transform-origin: 0 100%;
+	-o-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+}
+#heart .outline:after {
+	left: -11px;
+	-webkit-transform: rotate(45deg);
+	border-radius: 45px 60px 0 0;
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	-ms-transform-origin: 100% 100%;
+	-o-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+}
+#heart:hover .fill {
+	height:0px;
+}
+
+
+
+
+
+
+/* 425 -> 768 */ 
+
+/* img { height:350px }
+    .btn__commander {
+	width:30%;
+    }
+
+*/
+
+ /* 768 -> 1024 */
+
+ /*  img { height:500px }
+
+ .underline {
+	width: 9%:
+ }
+
+ .btn__commander {
+	width:25%;
+    }
+ } 
+ */
+
+ /* 1024 -> 1440 */
+
+ /* img { height: 700px; }
+
+ 	.underline {
+	width: 7%;
+ 	}
+ 	.btn__commander {
+	width:15%;
+    }
+
+    gros changement 
+	créer une div flex qui englobe TOUT l'article sauf le bouton
+	.flex {
+	display:flex;
+	justify-content: space-evenly;
+	}
+	creer des flex qui englobe titre + underline + les 3 choix
+	*/

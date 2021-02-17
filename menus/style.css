@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Couleurs */
 /* Polices */
 body {
@@ -12,6 +13,10 @@ ul {
 
 header {
   display: flex; }
+  header a {
+    width: calc(100% - 40px);
+    text-align: center;
+    margin-top: auto; }
 
 img {
   width: 100%;
@@ -20,15 +25,14 @@ img {
 
 .titre {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-top: -76px; }
 
 h4 {
   margin-left: 5%;
   font-family: Shrikhand;
   font-size: 1.1em;
-  font-weight: 400;
-  margin-top: -50px;
-  padding-top: 30px; }
+  font-weight: 400; }
 
 h5 {
   margin-bottom: 0px;
@@ -44,10 +48,13 @@ h5 {
   margin-left: 5%; }
 
 .fa-arrow-left {
-  transform: scale(0.7); }
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 2%; }
 
 .logo {
-  width: 50%; }
+  width: 50%;
+  vertical-align: middle; }
 
 .btn__commander {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
@@ -67,6 +74,30 @@ article {
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
   padding-bottom: 10%; }
+  article i {
+    background-color: #8edec9;
+    padding: 24px;
+    color: white;
+    border-radius: 0px 15px 15px 0;
+    float: right;
+    margin-right: -2%;
+    margin-top: -7px;
+    display: none !important; }
+  article ul {
+    animation-name: fade-in; }
+    article ul:nth-child(4) {
+      animation-duration: 2.0s; }
+    article ul:nth-child(7) {
+      animation-duration: 4.0s; }
+    article ul:nth-child(10) {
+      animation-duration: 6s; }
+@keyframes fade-in {
+  0% {
+    transform: translateY(40px);
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
   article li {
     background-color: white;
     border-radius: 20px;
@@ -76,69 +107,47 @@ article {
     margin-left: auto;
     padding: 7px;
     padding-bottom: 10px;
-    animation-name: fade-in;
-    animation-duration: 1s; }
-    article li:nth-child(1) {
-      animation-delay: 0.0s; }
-    article li:nth-child(2) {
-      animation-delay: 0.5s; }
-    article li:nth-child(3) {
-      animation-delay: 0.0s; }
-    article li:nth-child(4) {
-      animation-delay: 1.5s; }
-    article li:nth-child(5) {
-      animation-delay: 2.0s; }
-    article li:nth-child(6) {
-      animation-delay: 2.5s; }
-    article li:nth-child(7) {
-      animation-delay: 2.5s; }
-    article li:nth-child(8) {
-      animation-delay: 2.5s; }
-    article li:nth-child(9) {
-      animation-delay: 2.5s; }
+    overflow: hidden;
+    height: 50px; }
+    article li .testanim {
+      width: 100%;
+      display: inline-block; }
+      article li .testanim:hover {
+        transition: ease-in-out;
+        width: calc(100% - 72px); }
     article li:hover i {
       animation-name: test;
-      transform: translateX(0px) rotate(360deg);
-      animation-delay: 2s;
+      animation-duration: 2s;
       display: inline-block !important; }
-@keyframes fade-in {
+@keyframes test {
   0% {
-    opacity: 0;
-    transform: translateY(20px); }
+    transform: translateX(150px); }
   100% {
-    opacity: 100;
-    transform: translateY(0px); } }
-  article i {
-    background-color: #8edec9;
-    padding: 15px;
-    color: white;
-    border-radius: 0px 15px 15px 0;
-    float: right;
-    margin-right: -2%;
-    transform: translateX(150px);
-    display: none !important; }
-  article h6 {
-    margin: 0px;
-    width: 100%;
-    height: 20%;
-    margin-left: 2%;
-    font-size: 0.8em;
-    font-weight: 400; }
-  article strong {
-    font-size: 0.7em;
-    font-weight: 300; }
-    article strong:nth-child(1) {
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden; }
-    article strong:nth-child(2) {
-      font-weight: 400;
-      color: #4f4e4e; }
-  article .under {
-    display: flex;
-    width: 96%;
-    justify-content: space-between;
-    margin-left: 2%; }
+    transform: translateX(0px) rotate(720deg); } }
+h6 {
+  margin: 0px;
+  width: 100%;
+  height: 20%;
+  margin-left: 2%;
+  font-size: 0.8em;
+  font-weight: 400; }
+
+strong {
+  font-size: 0.7em;
+  font-weight: 300; }
+  strong:nth-child(1) {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+  strong:nth-child(2) {
+    font-weight: 400;
+    color: #4f4e4e; }
+
+.under {
+  display: flex;
+  width: 96%;
+  justify-content: space-between;
+  margin-left: 2%; }
 
 footer {
   font-size: 0.7em;
@@ -162,9 +171,8 @@ footer {
   display: flex;
   height: 70px;
   width: 70px;
-  float: right;
   transform: scale(0.3);
-  margin-top: -10px; }
+  margin-top: 21px; }
 
 #heart .fill {
   display: block;
@@ -258,5 +266,43 @@ footer {
 
 #heart:hover .fill {
   height: 0px; }
+
+/* 425 -> 768 */
+/* img { height:350px }
+    .btn__commander {
+	width:30%;
+    }
+
+*/
+/* 768 -> 1024 */
+ /*  img { height:500px }
+
+ .underline {
+	width: 9%:
+ }
+
+ .btn__commander {
+	width:25%;
+    }
+ } 
+ */
+/* 1024 -> 1440 */
+ /* img { height: 700px; }
+
+ 	.underline {
+	width: 7%;
+ 	}
+ 	.btn__commander {
+	width:15%;
+    }
+
+    gros changement 
+	créer une div flex qui englobe TOUT l'article sauf le bouton
+	.flex {
+	display:flex;
+	justify-content: space-evenly;
+	}
+	creer des flex qui englobe titre + underline + les 3 choix
+	*/
 
 /*# sourceMappingURL=style.css.map */
