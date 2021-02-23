@@ -130,7 +130,10 @@ h6 {
   height: 20%;
   margin-left: 2%;
   font-size: 0.8em;
-  font-weight: 400; }
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
 
 strong {
   font-size: 0.7em;
@@ -267,35 +270,41 @@ footer {
 #heart:hover .fill {
   height: 0px; }
 
-/* 425 -> 768 */
-/* img { height:350px }
-    .btn__commander {
-	width:30%;
-    }
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  img:nth-child(2) {
+    height: 350px; }
 
-*/
-/* 768 -> 1024 */
- /*  img { height:500px }
+  .btn_commander {
+    width: 30%; } }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  img:nth-child(2) {
+    height: 350px; }
 
- .underline {
-	width: 9%:
- }
+  .btn_commander {
+    width: 25%; }
 
- .btn__commander {
-	width:25%;
-    }
- } 
- */
-/* 1024 -> 1440 */
- /* img { height: 700px; }
+  .underline {
+    width: 9%; } }
+@media screen and (min-width: 1024px) and (max-width: 5000px) {
+  img:nth-child(2) {
+    height: 700px; }
 
- 	.underline {
-	width: 7%;
- 	}
- 	.btn__commander {
-	width:15%;
-    }
+  .btn__commander {
+    width: 15%; }
 
+  .underline {
+    width: 28%; }
+
+  .bigflex {
+    display: flex;
+    justify-content: space-evenly; }
+
+  .logo {
+    width: 30%; }
+
+  .article li {
+    width: 99%; } }
+/*
     gros changement 
 	créer une div flex qui englobe TOUT l'article sauf le bouton
 	.flex {

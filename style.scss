@@ -431,148 +431,86 @@ strong {
 						}}
 
 
-/* div id="loader-wrapper">
-    <div id="loader"></div>
- 
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
- 
-</div> */
 
-
-
-/* loader  
-body{background:#ECF0F1}
-
-.load {
-	position:absolute;
-	top:50%;
-	left:50%;
-	transform:translate(-50%, -50%);
-  /*change these sizes to fit into your project
-  width:100px;
-  height:100px;
-}
-.load hr{
-	border:0;
-	margin:0;
-	width:40%;
-	height:40%;
-	position:absolute;
-	border-radius:50%;
-	animation:spin 2s ease;
-	opacity: 0;}
-
-.load :first-child{background:$color-primary;animation-delay:-1.5s}
-.load :nth-child(2){background:$color-secondary;animation-delay:-1s}
-.load :nth-child(3){background:$color-tertiary;animation-delay:-0.5s}
-.load :last-child{background:$gris}
-
-@keyframes spin{
-  0%{transform:translate(0); opacity: 1 !important;}
-  25%{transform:translate(160%)}
-  50%{transform:translate(160%, 160%)}
-  75%{transform:translate(0, 160%)}
-  100%{opacity:1}
-}
-*/
-
-/* icons list 
-<i class="fas fa-hands-helping"></i>
-<i class="fas fa-utensils"></i>
-<i class="fas fa-mobile-alt"></i>
-<i class="fas fa-list-ul"></i>
-<i class="fas fa-store"></i>
-*/
-
-
-
-
-@media screen (min-width: 1024) {
-	body {
-		background-color: blue !important;
-	}
-}
-
-
-/* 425 -> 768 */ 
-
-/* .explore {
-	
- .btn_accueil {
-	width: 40%;
-	}
-	}
-	.titre_article {
-	text-align:center;
-	}
-	.choose p:nth-child(1) {
-	margin-left-6%;
-	}
-}
-
-
-/* 768 -> 1024 */
-
-/* .explore {
-	
- .btn_accueil {
-	width: 40%;
-	}}
-
-	.titre-article {
-	margin-left:0;
-	text-align:center;
-	}
-	.choose {
-	width:40%
-	margin-bottom: 30px;
-	}
-
-	.restaurants li {
-	height: 300px;
-	}
-
-	.restaurants .new .new2 {
-	left:85%
-	}
-
-	/* 1024 -> 1440 */
-
-	/* .logo {
-	width: 30%;
-	}
-
+@media screen and (min-width: 425px) and (max-width: 768px) {
 	.explore {
-	
- 	.btn_accueil {
-	width: 28%;
-	}}
-	
+		.btn__accueil {
+			width: 40%;
+		}}
+		.titre__article {
+			text-align: center;
+		}
+		.choose { 
+			p:nth-child(1) {
+			margin-left: -6%;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.explore {
+		.btn__accueil {
+			width: 40%;
+		}
+	}
+	 .titre__article {
+	 	margin-left: 0;
+	 	text-align: center;
+	 }
+	 .choose {
+	 	width: 40%;
+	 	margin-bottom: 30px;
+	 }
+	 .restaurants {
+	 	li {
+	 		height: 300px;
+	 	}
+	 .new {
+	 		left: 85%;
+	 }
+	 .new2 {
+	 	left: 85%;
+	 }
+
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 5000px) {
+	.logo {
+		width: 30%;
+	}
+	.titre__article {
+	 	margin-left: 0;
+	 	text-align: center;
+	 }
+	.explore {
+		.btn__accueil {
+			width: 28%;
+		}
+
+	}
 	.choose {
-	width: 26%
+		width: 26%;
 	}
-	.choose p:nth-child(1) {
-	margin-left-3%;
+	.choose {
+		p:nth-child(1) {
+			margin-left: -8%;
+		}
 	}
-
-
 	.restaurants {
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		li {
+			width: 45%;
+		}
+		.new {
+			top: 3%;
+			left: 89%;
+		}
+		.new2 {
+			left:89%;
+			top: 53%;
+		}
 	}
-
-	.restaurants li {
-	width: 45%
-	}
-
-	.restaurants .new {
-	top: 3%;
-	left: 89%;
-	}
-
-	.restaunrats .new2 {
-	left:89%
-	top: 53%
-	}
+}
