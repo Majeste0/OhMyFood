@@ -19,12 +19,18 @@
 
 	header {
 		display: flex;
-		a {
+		.alogo {
 			width: calc(100% - 40px);
 			text-align: center;
 			margin-top: auto;
 		}
-	}	
+		.arrow {
+			margin-top: auto;
+			margin-bottom: auto;
+			margin-left: 2%;
+		}
+
+	}
 	img {
 		width: 100%;
 		position: relative;
@@ -81,16 +87,14 @@
 		border-top-right-radius: 50px;
 		border-top-left-radius: 50px;
 		padding-bottom: 10%;
-			i {
-			background-color: rgb(142,222,201);
-			padding: 24px;
-			color:white;
+		i {
+			color: white;
 			border-radius: 0px 15px 15px 0;
 			float: right;
-			margin-right: -2%;
-			margin-top: -7px;
-			display: none !important;
-			}
+			margin-right: -8%;
+			margin-top: 10px;
+			padding: 24px;
+		}
 		ul {
 			&:nth-child(4) {
 				animation-duration: 2.0s;}
@@ -127,9 +131,18 @@
 							width: calc(100% - 72px);
 						}
 					}
-
+					.div_anim {
+						background-color: rgb(153,226,208);;
+						color: red;
+						height: 100px;
+						width: 60px;
+						float: right;
+						margin-right: -3%;
+						margin-top: -20px;
+						display: none !important;
+					}
 					&:hover {
-						i {
+						.div_anim {
 							animation-name: test;
 							animation-duration: 2s;
 							display: inline-block !important;
@@ -140,14 +153,24 @@
 							}
 
 							100% {
-								transform: translateX(0px) rotate(720deg);
+								transform: translateX(0px) ;
 							}
 
+						}
+						i {
+							animation-duration: 2s;
+							animation-name: rotation;
+							@keyframes rotation {
+								100% {
+									transform: rotate(1440deg);
+								}
+							}
 						}
 					}
 				}
 			}
-			
+
+
 
 
 
@@ -159,8 +182,8 @@
 				font-size: 0.8em;
 				font-weight: 400;
 				text-overflow: ellipsis;
-    			white-space: nowrap;
-   				overflow: hidden;	
+				white-space: nowrap;
+				overflow: hidden;	
 			}
 			strong {
 				font-size: 0.7em;
@@ -212,7 +235,6 @@
 					margin-bottom: 5px;
 				}
 			}
-
 
 
 			#heart {
@@ -361,12 +383,3 @@
 				}
 			}
 
-/*
-    gros changement 
-	créer une div flex qui englobe TOUT l'article sauf le bouton
-	.flex {
-	display:flex;
-	justify-content: space-evenly;
-	}
-	creer des flex qui englobe titre + underline + les 3 choix
-	*/

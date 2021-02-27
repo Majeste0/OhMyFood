@@ -247,7 +247,7 @@ footer {
   -ms-transition: height 2s ease-in-out;
   transition: height 2s ease-in-out; }
 
-.heart .fill:before, #heart .fill:after {
+.heart .fill:before, .heart .fill:after {
   background: #FFFFFF;
   border-radius: 85px 60px 0 0;
   content: "";
@@ -287,7 +287,7 @@ footer {
   position: relative;
   margin-left: 8px; }
 
-.heart .outline:before, #heart .outline:after {
+.heart .outline:before, .heart .outline:after {
   position: absolute;
   content: "";
   left: 28px;
